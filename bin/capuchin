@@ -2,6 +2,13 @@
 require 'capuchin'
 require 'capuchin/shell'
 
+require 'commander/import'
+
+program :name, 'capuchin'
+program :version, Capuchin::VERSION
+program :description, 'Capuchin is a tool for writing email newsletters with Markdown'
+
+
 CONFIG_FILE = "_config.yml"
 
 options = {}
@@ -12,4 +19,14 @@ end
 
 shell = Capuchin::Shell.new(options)
 
-shell.ping
+command :ping do |c|
+  c.action do |args, options|
+    shell.ping
+  end
+end
+
+command :build do |c|
+  c.action do |args, options|
+    shell.build
+  end
+end
