@@ -7,7 +7,7 @@ require 'commander/import'
 program :name, 'capuchin'
 program :version, Capuchin::VERSION
 program :description, 'Capuchin is a tool for writing email newsletters with Markdown'
-
+program :help, 'Author', 'Matt Swanson <matt@mdswanson.com>'
 
 CONFIG_FILE = "_config.yml"
 
@@ -19,14 +19,21 @@ end
 
 shell = Capuchin::Shell.new(options)
 
-command :ping do |c|
+default_command :build
+
+command :build do |c|
+  c.syntax = "capuchin build"
+  c.description = "Parse all Markdown files in _emails/ and render to _output/"
   c.action do |args, options|
-    shell.ping
+    shell.build
   end
 end
 
-command :build do |c|
+command :schedule do |c|
+  c.syntax = "capuchin schedule <path_to_email>"
+  c.description = "Schedule an email to be sent via MailChimp"
+
   c.action do |args, options|
-    shell.build
+    shell.schedule(args.first)
   end
 end

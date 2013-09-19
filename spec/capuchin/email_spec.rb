@@ -3,6 +3,7 @@ require "spec_helper"
 describe Capuchin::Email do
 
   let(:email) { Capuchin::Email.new("spec/fixtures", "2013-09-01-a-test-email.md") }
+  let(:future_email) { Capuchin::Email.new("spec/fixtures", "2013-09-01-a-future-email.md") }
 
   describe ".new" do
 
@@ -11,8 +12,12 @@ describe Capuchin::Email do
     end
 
     it "parses fields from filename" do
-      email.date.should eq Time.new(2013, 9, 1)
+      email.date.should eq Date.new(2013, 9, 1)
       email.slug.should eq "a-test-email"
+    end
+
+    it "overwrites filename fields with front matter" do
+      future_email.date.should eq Date.new(2013, 9, 8)
     end
 
     it "converts the markdown email to HTML" do

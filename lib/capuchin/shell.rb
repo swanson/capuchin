@@ -6,10 +6,6 @@ module Capuchin
       @options = options
     end
 
-    def ping
-      puts "Pong!"
-    end
-
     def build
       email_files = Dir.glob("_emails/*.{md,markdown}")
       puts "Processing #{email_files.size} emails..."

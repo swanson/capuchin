@@ -41,7 +41,7 @@ module Capuchin
 
       def decode_filename
         m, date_str, @slug, ext = *@filename.match(FILENAME_REGEX)
-        @date = Time.parse(date_str)
+        @date = Date.parse(date_str)
       end
 
       def split_contents_from_front_matter

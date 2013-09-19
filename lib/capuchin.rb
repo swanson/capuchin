@@ -2,7 +2,7 @@ require "capuchin/version"
 
 require "english"
 require "redcarpet"
-require "time"
+require "date"
 require "yaml"
 
 require "capuchin/markdown"
