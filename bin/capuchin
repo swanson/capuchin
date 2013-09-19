@@ -21,14 +21,6 @@ shell = Capuchin::Shell.new(options)
 
 default_command :build
 
-command :build do |c|
-  c.syntax = "capuchin build"
-  c.description = "Parse all Markdown files in _emails/ and render to _output/"
-  c.action do |args, options|
-    shell.build
-  end
-end
-
 command :schedule do |c|
   c.syntax = "capuchin schedule <path_to_email>"
   c.description = "Schedule an email to be sent via MailChimp"

@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us5.api.mailchimp.com/2.0/campaigns/create
+    body:
+      encoding: UTF-8
+      string: ! '{"apikey":"<API_KEY>","type":"regular","options":{"list_id":"ee7084f978","subject":"A
+        Test Email","from_name":"Matt Swanson","from_email":"matt@mdswanson.com","generate_text":true},"content":{"html":"<p>This
+        is a test email with some <em>Markdown</em> and a <a href=\"http://google.com\">link</a>.</p>\n"}}'
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 19 Sep 2013 22:03:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '914'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - _AVESTA_ENVIRONMENT=prod; path=/
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        {"id":"dae3d90cb4","web_id":568933,"list_id":"ee7084f978","folder_id":0,"template_id":0,"content_type":"html","content_edited_by":"mdswanson","title":"A
+        Test Email","type":"regular","create_time":"2013-09-19 22:03:53","send_time":null,"content_updated_time":"2013-09-19
+        22:03:54","status":"save","from_name":"Matt Swanson","from_email":"matt@mdswanson.com","subject":null,"to_name":"","archive_url":"http:\/\/eepurl.com\/FAxML","archive_url_long":"http:\/\/us5.campaign-archive2.com\/?u=42197992359c6140b24ce0046&id=dae3d90cb4","emails_sent":0,"inline_css":false,"analytics":"N","analytics_tag":"","authenticate":false,"ecomm360":false,"auto_tweet":false,"auto_fb_post":"","auto_footer":false,"timewarp":false,"timewarp_schedule":null,"tracking":{"html_clicks":true,"text_clicks":true,"opens":true},"parent_id":"","tests_sent":0,"tests_remain":12,"segment_text":"No
+        segment used","segment_opts":[],"type_opts":[]}'
+    http_version: 
+  recorded_at: Thu, 19 Sep 2013 22:03:54 GMT
+- request:
+    method: post
+    uri: https://us5.api.mailchimp.com/2.0/campaigns/schedule
+    body:
+      encoding: UTF-8
+      string: ! '{"apikey":"<API_KEY>","cid":"dae3d90cb4","schedule_time":"2014-12-30
+        20:30:00"}'
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 19 Sep 2013 22:03:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '18'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - _AVESTA_ENVIRONMENT=prod; path=/
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        {"complete":true}'
+    http_version: 
+  recorded_at: Thu, 19 Sep 2013 22:03:54 GMT
+recorded_with: VCR 2.5.0
