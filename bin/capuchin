@@ -19,8 +19,6 @@ end
 
 shell = Capuchin::Shell.new(options['capuchin'])
 
-default_command :build
-
 command :schedule do |c|
   c.syntax = "capuchin schedule <path_to_email>"
   c.description = "Schedule an email to be sent via MailChimp"

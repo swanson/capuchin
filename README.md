@@ -27,13 +27,9 @@ The directory structure is as follows:
 
 # Commands
 
-* `capuchin build` processes all emails in `_emails` and output them to 
-`_newsletter` for you to preview
 * `capuchin schedule _emails/PATH_TO_EMAIL.md` will process the input email, and 
 schedule it for MailChimp delivery based on the date in the YAML front-matter 
 (defaults to the date in the filename)
-* `capuchin send _emails/PATH_TO_EMAIL.md` will process the input email and then
-send it out immediately.
 
 # Configuration
 
@@ -52,7 +48,8 @@ capuchin:
   from_email: "you@example.com"
   from_name: "Joe Cool"
   list_name: "Joe's List"
-  delivery_time: 8:30
+  template_id: 71337
+  delivery_time: "8:30"
 ```
 
 # Example email
@@ -62,7 +59,6 @@ contents (and the same configuration as above):
 ```
 ---
 subject: Selling Software Products
-date: 2013-09-01
 ---
 
 This is an email about how to sell software!
