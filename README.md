@@ -4,7 +4,7 @@ tuned!)
 # Capuchin
 
 Capuchin is a tool for writing email newsletters. It allows you to write content in 
-Markdown and send or schedule the resulting campaign via the MailChimp API.
+Markdown and schedule the resulting campaign for delivery via the MailChimp API.
 
 You can think of Capuchin as "Jekyll for email newsletters".
 
@@ -27,13 +27,21 @@ The directory structure is as follows:
 
 # Commands
 
+* `capuchin new` - NOT IMPLEMENTED YET
 * `capuchin schedule _emails/PATH_TO_EMAIL.md` will process the input email, and 
 schedule it for MailChimp delivery based on the date in the YAML front-matter 
 (defaults to the date in the filename)
 
+# Templating
+Capuchin leverages MailChimps templating system (instead of doing templating 
+locally). To have your content inserted into your email, make sure your template
+has `mc:edit="main"` in it.
+
+You need to set the template ID from MailChimp in `_config.yml` (see below).
+
 # Configuration
 
-Set your MailChimp API key (You can see your API keys here) in `.env`. 
+Set your MailChimp API key (You can see your API keys here) in the `.env` file. 
 
 DO NOT CHECK THIS INTO SOURCE CODE IF YOUR REPOSITORY IS PUBLICLY ACCESSIBLE!!
 
