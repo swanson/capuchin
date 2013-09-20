@@ -16,7 +16,7 @@ describe Capuchin::MailChimp do
 
   describe ".schedule", vcr: true do
     it "schedules a campaign with the correct email subject" do
-      result = mc.schedule(email, list_id)
+      result = mc.schedule(email, list_id, 105785, "Test", "matt@mdswanson.com")
 
       result['complete'].should be_true
     end

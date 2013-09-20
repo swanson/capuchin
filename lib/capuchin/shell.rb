@@ -6,11 +6,14 @@ module Capuchin
       @options = options
     end
 
-    def schedule(filename)
-      contents = File.open(filename).read
-      email = Capuchin::Email.new(filename, contents)
+    def schedule(path)
+      dir = File.dirname(path)
+      filename = File.basename(path)
+      
+      email = Capuchin::Email.new(dir, filename)
 
-      Capuchin::Scheduler.new(email).schedule
+      puts Capuchin::Scheduler.new(email, @options).schedule
     end
+
   end
 end

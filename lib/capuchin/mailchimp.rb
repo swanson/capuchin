@@ -9,14 +9,14 @@ module Capuchin
       list['data'].first
     end
 
-    def schedule(email, list_id)
-      campaign = create_campaign(email, list_id)
+    def schedule(email, list_id, template_id, from_name, from_email)
+      campaign = create_campaign(email, list_id, template_id, from_name, from_email)
       schedule_delivery(campaign['id'])
     end
 
     private
-      def create_campaign(email, list_id)
-        campaign_options = build_campaign_options(email, list_id)
+      def create_campaign(email, list_id, template_id, from_name, from_email)
+        campaign_options = build_campaign_options(email, list_id, template_id, from_name, from_email)
         @client.campaigns.create(campaign_options)
       end
 
@@ -24,18 +24,21 @@ module Capuchin
         @client.campaigns.schedule(build_schedule_options(campaign_id))
       end
 
-      def build_campaign_options(email, list_id)
+      def build_campaign_options(email, list_id, template_id, from_name, from_email)
         {
           type: "regular",
           options: {
             list_id: list_id,
             subject: email.subject,
-            from_name: "Matt Swanson",
-            from_email: "matt@mdswanson.com",
-            generate_text: true
+            from_name: from_name,
+            from_email: from_email,
+            generate_text: true,
+            template_id: template_id
           },
           content: {
-            html: email.content
+            sections: {
+              main: email.content
+            }
           }
         }
       end

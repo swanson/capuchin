@@ -15,11 +15,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 19 Sep 2013 22:03:53 GMT
+      - Fri, 20 Sep 2013 02:52:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '999'
+      - '1000'
       Connection:
       - keep-alive
       Vary:
@@ -32,7 +32,7 @@ http_interactions:
 
         {"total":1,"data":[{"id":"ee7084f978","web_id":152997,"name":"Blog newsletter","date_created":"2013-09-15
         23:46:36","email_type_option":false,"use_awesomebar":true,"default_from_name":"Matt
-        Swanson","default_from_email":"matt@mdswanson.com","default_subject":"","default_language":"en","list_rating":0,"subscribe_url_short":"http:\/\/eepurl.com\/Fi5ZX","subscribe_url_long":"http:\/\/mdswanson.us5.list-manage.com\/subscribe?u=42197992359c6140b24ce0046&id=ee7084f978","beamer_address":"NDIxOTc5OTIzNTljNjE0MGIyNGNlMDA0Ni1mMDZlNTc4OC0zZjcwLTRkMTAtODFmZi04Mzk3NTNhNzE2Y2U@campaigns.mailchimp.com","visibility":"pub","stats":{"member_count":0,"unsubscribe_count":0,"cleaned_count":0,"member_count_since_send":0,"unsubscribe_count_since_send":0,"cleaned_count_since_send":0,"campaign_count":3,"grouping_count":0,"group_count":0,"merge_var_count":2,"avg_sub_rate":null,"avg_unsub_rate":null,"target_sub_rate":null,"open_rate":null,"click_rate":null,"date_last_campaign":null},"modules":[]}],"errors":[]}'
+        Swanson","default_from_email":"matt@mdswanson.com","default_subject":"","default_language":"en","list_rating":0,"subscribe_url_short":"http:\/\/eepurl.com\/Fi5ZX","subscribe_url_long":"http:\/\/mdswanson.us5.list-manage1.com\/subscribe?u=42197992359c6140b24ce0046&id=ee7084f978","beamer_address":"NDIxOTc5OTIzNTljNjE0MGIyNGNlMDA0Ni1mMDZlNTc4OC0zZjcwLTRkMTAtODFmZi04Mzk3NTNhNzE2Y2U@campaigns.mailchimp.com","visibility":"pub","stats":{"member_count":0,"unsubscribe_count":0,"cleaned_count":0,"member_count_since_send":0,"unsubscribe_count_since_send":0,"cleaned_count_since_send":0,"campaign_count":4,"grouping_count":0,"group_count":0,"merge_var_count":3,"avg_sub_rate":null,"avg_unsub_rate":null,"target_sub_rate":null,"open_rate":null,"click_rate":null,"date_last_campaign":null},"modules":[]}],"errors":[]}'
     http_version: 
-  recorded_at: Thu, 19 Sep 2013 22:03:53 GMT
+  recorded_at: Fri, 20 Sep 2013 02:52:20 GMT
 recorded_with: VCR 2.5.0

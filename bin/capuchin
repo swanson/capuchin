@@ -14,10 +14,10 @@ CONFIG_FILE = "_config.yml"
 options = {}
 
 if File.exists?(CONFIG_FILE)
-  options.merge YAML.load_file(CONFIG_FILE)
+  options.merge! YAML.load_file(CONFIG_FILE)
 end
 
-shell = Capuchin::Shell.new(options)
+shell = Capuchin::Shell.new(options['capuchin'])
 
 default_command :build
 
