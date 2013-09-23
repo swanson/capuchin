@@ -55,7 +55,7 @@ Specify Capuchin configuration in `_config.yml`
 capuchin:
   from_email: "you@example.com"
   from_name: "Joe Cool"
-  list_name: "Joe's List"
+  list_id: "ee90847678"
   template_id: 71337
   delivery_time: "8:30"
 ```
@@ -75,7 +75,7 @@ This is an email about how to sell software!
 
 Run `capuchin schedule _emails\2013-09-01-selling-software-products.md` to schedule
 this campaign in MailChimp to be sent on 2013-09-01 at 8:30am to all members of 
-"Joe's List" with a Subject of "Selling Software Products".
+the list with a Subject of "Selling Software Products".
 
 # Colophon
 A capuchin monkey are New World monkeys of the subfamily Cebinae. They are 
