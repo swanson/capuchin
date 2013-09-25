@@ -14,9 +14,13 @@ If you want fancy HTML you probably want to stick to MailChimp's WYSIWYG editor,
 for a newsletter where the primary content is text (and some links) give Capuchin
 a shot.
 
-# Installation
+## Installation
 
-`gem install capuchin`
+You don't need to add it to your Gemfile - it's best kept as a system-wide gem. All you need to do is install it from the command line:
+
+    $ gem install capuchin
+
+This installs the command line tool `capuchin`.
 
 # Usage
 
