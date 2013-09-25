@@ -46,7 +46,7 @@ module Capuchin
 
       def split_contents_from_front_matter
         if file_contents =~ /\A(---\s*\n.*?\n?)^(---\s*$\n?)/m
-          @markdown_content = $POSTMATCH
+          @markdown_content = $' # Post match content
           @options.merge!(YAML.load($1))
         end
       end

@@ -4,7 +4,6 @@ Dotenv.load
 require "capuchin/version"
 
 require "date"
-require "english"
 require "erb"
 require "gibbon"
 require "redcarpet"

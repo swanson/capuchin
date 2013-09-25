@@ -1,7 +1,9 @@
-(This project is in development and not ready for general consumption yet, stay
-tuned!)
-
 # Capuchin
+
+[![Gem Version](https://badge.fury.io/rb/capuchin.png)](http://badge.fury.io/rb/capuchin)
+[![Build Status](https://travis-ci.org/swanson/capuchin.png)](https://travis-ci.org/swanson/capuchin)
+[![Dependency Status](https://gemnasium.com/swanson/capuchin.png)](https://gemnasium.com/swanson/capuchin)
+
 
 Capuchin is a tool for writing email newsletters. It allows you to write content in 
 Markdown and schedule the resulting campaign for delivery via the MailChimp API.
