@@ -27,7 +27,8 @@ The directory structure is as follows:
 
 # Commands
 
-* `capuchin new` - NOT IMPLEMENTED YET
+* `capuchin new` - NOT IMPLEMENTED YET (generate directory structure)
+* `capuchin create` - NOT IMPLEMENTED YET (create file in `_emails`)
 * `capuchin schedule _emails/PATH_TO_EMAIL.md` will process the input email, and 
 schedule it for MailChimp delivery based on the date in the YAML front-matter 
 (defaults to the date in the filename)
@@ -57,7 +58,7 @@ capuchin:
   from_name: "Joe Cool"
   list_id: "ee90847678"
   template_id: 71337
-  delivery_time: "8:30"
+  delivery_time: "08:30:00"
 ```
 
 # Example email

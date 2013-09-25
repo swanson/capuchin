@@ -8,7 +8,7 @@ module Capuchin
     end
 
     def schedule
-      result = @api.schedule(@email, list_id, template_id, from_name, from_email)
+      result = @api.schedule(@email, list_id, template_id, from_name, from_email, delivery_time)
 
       if result['complete']
         "#{@email.subject} was scheduled to be sent."
@@ -32,6 +32,10 @@ module Capuchin
 
       def from_email
         @options['from_email']
+      end
+
+      def delivery_time
+        @options['delivery_time']
       end
   end
 end

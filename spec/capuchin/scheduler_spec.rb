@@ -7,12 +7,14 @@ describe Capuchin::Scheduler do
   let(:template_id) { 1337 }
   let(:from_name) { "Test" }
   let(:from_email) { "test@example.com" }
+  let(:delivery_time) { "10:30:00" }
   let(:options) {
     {
       'list_id' => list_id,
       'template_id' => template_id,
       'from_name' => from_name,
-      'from_email' => from_email
+      'from_email' => from_email,
+      'delivery_time' => delivery_time
     }
   }
 
@@ -23,7 +25,7 @@ describe Capuchin::Scheduler do
   describe ".schedule", vcr: true do
     it "schedules the email for delivery" do
       fake_api.should_receive(:schedule)
-        .with(email, list_id, template_id, from_name, from_email)
+        .with(email, list_id, template_id, from_name, from_email, delivery_time)
         .and_return({'complete' => true})
 
       result = scheduler.schedule

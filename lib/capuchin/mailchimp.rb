@@ -9,9 +9,9 @@ module Capuchin
       list['data'].first
     end
 
-    def schedule(email, list_id, template_id, from_name, from_email)
+    def schedule(email, list_id, template_id, from_name, from_email, time)
       campaign = create_campaign(email, list_id, template_id, from_name, from_email)
-      schedule_delivery(campaign['id'])
+      schedule_delivery(campaign['id'], email.date, time)
     end
 
     private
@@ -20,8 +20,8 @@ module Capuchin
         @client.campaigns.create(campaign_options)
       end
 
-      def schedule_delivery(campaign_id)
-        @client.campaigns.schedule(build_schedule_options(campaign_id))
+      def schedule_delivery(campaign_id, date, time)
+        @client.campaigns.schedule(build_schedule_options(campaign_id, date, time))
       end
 
       def build_campaign_options(email, list_id, template_id, from_name, from_email)
@@ -43,10 +43,10 @@ module Capuchin
         }
       end
 
-      def build_schedule_options(campaign_id)
+      def build_schedule_options(campaign_id, date, time)
         {
           cid: campaign_id,
-          schedule_time: "2014-12-30 20:30:00"
+          schedule_time: "#{date} #{time}"
         }
       end
   end

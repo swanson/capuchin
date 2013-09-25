@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://us5.api.mailchimp.com/2.0/lists/list
+    uri: https://us7.api.mailchimp.com/2.0/lists/list
     body:
       encoding: UTF-8
       string: ! '{"apikey":"<API_KEY>","filters":{"listname":"Blog newsletter"},"limit":1}'
@@ -15,11 +15,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 20 Sep 2013 02:52:20 GMT
+      - Wed, 25 Sep 2013 15:51:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '1000'
+      - '967'
       Connection:
       - keep-alive
       Vary:
@@ -30,9 +30,8 @@ http_interactions:
       encoding: US-ASCII
       string: ! '
 
-        {"total":1,"data":[{"id":"ee7084f978","web_id":152997,"name":"Blog newsletter","date_created":"2013-09-15
-        23:46:36","email_type_option":false,"use_awesomebar":true,"default_from_name":"Matt
-        Swanson","default_from_email":"matt@mdswanson.com","default_subject":"","default_language":"en","list_rating":0,"subscribe_url_short":"http:\/\/eepurl.com\/Fi5ZX","subscribe_url_long":"http:\/\/mdswanson.us5.list-manage1.com\/subscribe?u=42197992359c6140b24ce0046&id=ee7084f978","beamer_address":"NDIxOTc5OTIzNTljNjE0MGIyNGNlMDA0Ni1mMDZlNTc4OC0zZjcwLTRkMTAtODFmZi04Mzk3NTNhNzE2Y2U@campaigns.mailchimp.com","visibility":"pub","stats":{"member_count":0,"unsubscribe_count":0,"cleaned_count":0,"member_count_since_send":0,"unsubscribe_count_since_send":0,"cleaned_count_since_send":0,"campaign_count":4,"grouping_count":0,"group_count":0,"merge_var_count":3,"avg_sub_rate":null,"avg_unsub_rate":null,"target_sub_rate":null,"open_rate":null,"click_rate":null,"date_last_campaign":null},"modules":[]}],"errors":[]}'
+        {"total":1,"data":[{"id":"88300e1d4f","web_id":97817,"name":"Test list","date_created":"2013-09-25
+        15:45:30","email_type_option":false,"use_awesomebar":true,"default_from_name":"Matt","default_from_email":"swan3788@gmail.com","default_subject":"","default_language":"en","list_rating":0,"subscribe_url_short":"http:\/\/eepurl.com\/FTpmr","subscribe_url_long":"http:\/\/github.us7.list-manage2.com\/subscribe?u=97cf7c859d9879d874ba9e34e&id=88300e1d4f","beamer_address":"OTdjZjdjODU5ZDk4NzlkODc0YmE5ZTM0ZS0xYmU1NDY1NC1hZWE5LTQ3MjMtOWUxYy1lMGRhZGEzMzUzYjE@campaigns.mailchimp.com","visibility":"pub","stats":{"member_count":0,"unsubscribe_count":0,"cleaned_count":0,"member_count_since_send":0,"unsubscribe_count_since_send":0,"cleaned_count_since_send":0,"campaign_count":1,"grouping_count":0,"group_count":0,"merge_var_count":2,"avg_sub_rate":0,"avg_unsub_rate":0,"target_sub_rate":0,"open_rate":0,"click_rate":0,"date_last_campaign":null},"modules":[]}],"errors":[]}'
     http_version: 
-  recorded_at: Fri, 20 Sep 2013 02:52:20 GMT
+  recorded_at: Wed, 25 Sep 2013 15:51:21 GMT
 recorded_with: VCR 2.5.0

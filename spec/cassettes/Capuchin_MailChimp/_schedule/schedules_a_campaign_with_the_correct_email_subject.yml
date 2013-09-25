@@ -2,11 +2,11 @@
 http_interactions:
 - request:
     method: post
-    uri: https://us5.api.mailchimp.com/2.0/campaigns/create
+    uri: https://us7.api.mailchimp.com/2.0/campaigns/create
     body:
       encoding: UTF-8
-      string: ! '{"apikey":"<API_KEY>","type":"regular","options":{"list_id":"ee7084f978","subject":"A
-        Test Email","from_name":"Test","from_email":"matt@mdswanson.com","generate_text":true,"template_id":105785},"content":{"sections":{"main":"<p>This
+      string: ! '{"apikey":"<API_KEY>","type":"regular","options":{"list_id":"88300e1d4f","subject":"A
+        Test Email","from_name":"Test","from_email":"matt@mdswanson.com","generate_text":true,"template_id":34557},"content":{"sections":{"main":"<p>This
         is a test email with some <em>Markdown</em> and a <a href=\"http://google.com\">link</a>.</p>\n"}}}'
     headers: {}
   response:
@@ -17,11 +17,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 20 Sep 2013 02:52:19 GMT
+      - Wed, 25 Sep 2013 15:51:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '915'
+      - '917'
       Connection:
       - keep-alive
       Vary:
@@ -32,18 +32,18 @@ http_interactions:
       encoding: US-ASCII
       string: ! '
 
-        {"id":"9c7189d759","web_id":569137,"list_id":"ee7084f978","folder_id":0,"template_id":105785,"content_type":"template","content_edited_by":"mdswanson","title":"A
-        Test Email","type":"regular","create_time":"2013-09-20 02:52:19","send_time":null,"content_updated_time":"2013-09-20
-        02:52:19","status":"save","from_name":"Test","from_email":"matt@mdswanson.com","subject":null,"to_name":"","archive_url":"http:\/\/eepurl.com\/FA5Oj","archive_url_long":"http:\/\/us5.campaign-archive2.com\/?u=42197992359c6140b24ce0046&id=9c7189d759","emails_sent":0,"inline_css":false,"analytics":"N","analytics_tag":"","authenticate":false,"ecomm360":false,"auto_tweet":false,"auto_fb_post":"","auto_footer":false,"timewarp":false,"timewarp_schedule":null,"tracking":{"html_clicks":true,"text_clicks":true,"opens":true},"parent_id":"","tests_sent":0,"tests_remain":12,"segment_text":"No
+        {"id":"c838606511","web_id":172045,"list_id":"88300e1d4f","folder_id":0,"template_id":34557,"content_type":"template","content_edited_by":"matt
+        swanson","title":"A Test Email","type":"regular","create_time":"2013-09-25
+        15:51:19","send_time":null,"content_updated_time":"2013-09-25 15:51:20","status":"save","from_name":"Test","from_email":"matt@mdswanson.com","subject":null,"to_name":"","archive_url":"http:\/\/eepurl.com\/FTqyL","archive_url_long":"http:\/\/us7.campaign-archive2.com\/?u=97cf7c859d9879d874ba9e34e&id=c838606511","emails_sent":0,"inline_css":false,"analytics":"N","analytics_tag":"","authenticate":false,"ecomm360":false,"auto_tweet":false,"auto_fb_post":"","auto_footer":false,"timewarp":false,"timewarp_schedule":null,"tracking":{"html_clicks":true,"text_clicks":true,"opens":true},"parent_id":"","tests_sent":0,"tests_remain":12,"segment_text":"No
         segment used","segment_opts":[],"type_opts":[]}'
     http_version: 
-  recorded_at: Fri, 20 Sep 2013 02:52:19 GMT
+  recorded_at: Wed, 25 Sep 2013 15:51:20 GMT
 - request:
     method: post
-    uri: https://us5.api.mailchimp.com/2.0/campaigns/schedule
+    uri: https://us7.api.mailchimp.com/2.0/campaigns/schedule
     body:
       encoding: UTF-8
-      string: ! '{"apikey":"<API_KEY>","cid":"9c7189d759","schedule_time":"2014-12-30
+      string: ! '{"apikey":"<API_KEY>","cid":"c838606511","schedule_time":"2014-12-30
         20:30:00"}'
     headers: {}
   response:
@@ -54,7 +54,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Fri, 20 Sep 2013 02:52:20 GMT
+      - Wed, 25 Sep 2013 15:51:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -69,5 +69,5 @@ http_interactions:
 
         {"complete":true}'
     http_version: 
-  recorded_at: Fri, 20 Sep 2013 02:52:20 GMT
+  recorded_at: Wed, 25 Sep 2013 15:51:21 GMT
 recorded_with: VCR 2.5.0
