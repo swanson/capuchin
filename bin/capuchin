@@ -33,6 +33,6 @@ command :new do |c|
   c.description = "Creates a new Capuchin directory scaffold in <directory>"
 
   c.action do |args, options|
-    schedule.scaffold(args.first)
+    shell.scaffold(args.first)
   end
 end
