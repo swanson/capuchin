@@ -27,3 +27,12 @@ command :schedule do |c|
     shell.schedule(args.first)
   end
 end
+
+command :new do |c|
+  c.syntax = "capuchin new <directory>"
+  c.description = "Creates a new Capuchin directory scaffold in <directory>"
+
+  c.action do |args, options|
+    schedule.scaffold(args.first)
+  end
+end

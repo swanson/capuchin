@@ -1,0 +1,6 @@
+capuchin:
+  from_email: YOUR_EMAIL
+  from_name: YOUR_NAME
+  list_id: YOUR_ID
+  template_id: YOUR_TEMPLATE_ID
+  delivery_time: "08:30:00"
