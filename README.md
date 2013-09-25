@@ -14,6 +14,10 @@ If you want fancy HTML you probably want to stick to MailChimp's WYSIWYG editor,
 for a newsletter where the primary content is text (and some links) give Capuchin
 a shot.
 
+# Installation
+
+`gem install capuchin`
+
 # Usage
 
 The directory structure is as follows:
