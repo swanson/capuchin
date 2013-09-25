@@ -3,11 +3,12 @@ Dotenv.load
 
 require "capuchin/version"
 
-require "english"
-require "redcarpet"
 require "date"
-require "yaml"
+require "english"
+require "erb"
 require "gibbon"
+require "redcarpet"
+require "yaml"
 
 require "capuchin/markdown"
 require "capuchin/email"

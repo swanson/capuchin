@@ -28,7 +28,9 @@ The directory structure is as follows:
 # Commands
 
 * `capuchin new PATH` will scaffold the directory structure in PATH 
-* `capuchin create` - NOT IMPLEMENTED YET (create file in `_emails`)
+* `capuchin create "Email Subject"` will generate a Markdown email file with the
+provided subject
+
 * `capuchin schedule _emails/PATH_TO_EMAIL.md` will process the input email, and 
 schedule it for MailChimp delivery based on the date in the YAML front-matter 
 (defaults to the date in the filename)

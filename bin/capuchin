@@ -36,3 +36,12 @@ command :new do |c|
     shell.scaffold(args.first)
   end
 end
+
+command :create do |c|
+  c.syntax = "capuchin create \"Email subject\""
+  c.description = "Create a markdown template email with the given subject"
+
+  c.action do |args, options|
+    shell.create(args.first)
+  end
+end

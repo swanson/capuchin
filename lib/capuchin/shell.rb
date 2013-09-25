@@ -24,9 +24,30 @@ module Capuchin
       puts "Capuchin directory structure created in #{directory_path}"
     end
 
+    def create(subject)
+      slug = slugify(subject)
+      filename = "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.md"
+
+      File.open(File.join("_emails", filename), 'w') do |f|
+        f.write <<-eos
+---
+subject: "#{subject}"
+---
+
+Write your kick-ass content here!
+        eos
+      end
+
+      puts "Created _emails/#{filename}"
+    end
+
     private
       def sample_directory
         File.expand_path("../sample_directory", File.dirname(__FILE__))
+      end
+
+      def slugify(text)
+        text.scan(/\w+/).join("-").downcase
       end
   end
 end
