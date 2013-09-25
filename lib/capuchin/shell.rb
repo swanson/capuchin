@@ -19,8 +19,9 @@ module Capuchin
       directory_path = File.expand_path(path, Dir.pwd)
       
       FileUtils.mkdir_p(directory_path)
-
       FileUtils.cp_r sample_directory + '/.', directory_path
+
+      puts "Capuchin directory structure created in #{directory_path}"
     end
 
     private
