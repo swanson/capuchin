@@ -92,5 +92,11 @@ considered the most intelligent New World monkeys, known especially for their
 long-term tool usage and social structures. Capuchin monkeys are sometimes referred
 to as "nature's butlers" because of their historic use as service animals.
 
+# Contact
+Matt Swanson, [mdswanson.com](http://mdswanson.com) [@_swanson](http://twitter.com/_swanson)
+
+# License
+MIT
+
 
 
