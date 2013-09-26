@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "redcarpet", "~> 3.0.0"
   spec.add_dependency "dotenv", "~> 0.9.0"
   spec.add_dependency "gibbon", "~> 1.0.2"
+  spec.add_dependency "coderay", "~> 1.0.9"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"

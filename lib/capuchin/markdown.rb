@@ -1,4 +1,10 @@
 module Capuchin
+  class HighlightingRenderer < Redcarpet::Render::HTML
+    def block_code(code, language)
+      CodeRay.highlight(code, language)
+    end
+  end
+
   class Markdown
     def initialize
       options = {
@@ -11,7 +17,8 @@ module Capuchin
         superscript: true
       }
 
-      @engine = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
+      renderer = HighlightingRenderer.new
+      @engine = Redcarpet::Markdown.new(renderer, options)
     end
 
     def render(markdown)

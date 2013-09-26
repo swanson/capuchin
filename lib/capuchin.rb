@@ -3,6 +3,7 @@ Dotenv.load
 
 require "capuchin/version"
 
+require "coderay"
 require "date"
 require "erb"
 require "gibbon"
