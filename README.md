@@ -70,6 +70,8 @@ capuchin:
   from_name: "Joe Cool"
   list_id: "ee90847678"
   template_id: 71337
+
+  # Delivery time is 24 Hour format in GMT
   delivery_time: "08:30:00"
 ```
 
@@ -87,7 +89,7 @@ This is an email about how to sell software!
 ```
 
 Run `capuchin schedule _emails\2013-09-01-selling-software-products.md` to schedule
-this campaign in MailChimp to be sent on 2013-09-01 at 8:30am to all members of 
+this campaign in MailChimp to be sent on 2013-09-01 at 08:30 AM (GMT) to all members of 
 the list with a Subject of "Selling Software Products".
 
 # Colophon
